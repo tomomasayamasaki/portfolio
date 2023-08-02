@@ -1958,7 +1958,7 @@ input, select, textarea {
 
 		header.major h1, header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
 			position: relative;
-			left: 100px
+			left: 100px;
 		}
 
 			header.major h1:after, header.major h2:after, header.major h3:after, header.major h4:after, header.major h5:after, header.major h6:after {
