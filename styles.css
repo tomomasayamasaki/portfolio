@@ -6,6 +6,8 @@ body, h1, h2, h3, p, ul, li {
 
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
 header {
@@ -50,19 +52,31 @@ img {
   border-radius: 50%;
   display: block;
   margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1, h2, h3 {
   text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
 }
 
 .research-statement {
   font-style: italic;
   text-align: center;
+  color: #555;
 }
 
-.project, .publication {
-  margin-bottom: 20px;
+.bio {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 footer {
