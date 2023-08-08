@@ -30,12 +30,6 @@
 		  gtag('config', 'G-33XK7BECLX');
 		</script>
 
-
-		<script>
-			document.getElementById("counter").innerText = 0;
-			alert(document.getElementById("counter").innerText)
-		</script>
-
 	</head>
 	<body class="is-preload" onload="incrementCounter()">
 
@@ -256,7 +250,7 @@
 					</div>
 
 					<h1>Thank you for your visiting</h1>
-					<p><div class="bordered-text"><span id="counter">0</span></div></p>
+					<p><div class="bordered-text"><span id="count">0</span></div></p>
 
 
 
@@ -278,11 +272,10 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				function incrementCounter() {
-				    var meme = document.getElementById("counter").innerText
-				    meme += 1;
-				    alert(meme)
-				    document.getElementById("counter").innerText = meme;
-				    alert(document.getElementById("counter").innerText)
+					var thisCount = $("#count").html();
+					　　 thisCount = Number(thisCount);
+					    thisCount = thisCount + 1;
+					$("#count").html(thisCount);
 				}
 			</script>
 
