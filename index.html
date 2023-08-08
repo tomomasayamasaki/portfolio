@@ -19,8 +19,17 @@
 			    border-radius: 10px;
 			}
 		</style>
+
+		<script>
+		        var visitorCount = 0;
+		
+		        function incrementVisitorCount() {
+		            visitorCount++;
+		            document.getElementById("visitor-count").textContent = visitorCount;
+		        }
+		</script>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload", onload="incrementVisitorCount()">
 
 		<!-- Header -->
 			<section id="header">
@@ -254,6 +263,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<span id="visitor-count">0</span> Visiters
 
 	</body>
 </html>
