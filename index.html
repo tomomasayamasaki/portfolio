@@ -239,6 +239,29 @@
 						</ul>
 					</div>
 
+					<h1>Thank you for your visiting</h1>
+					<p>visiters: <div class="bordered-text"><span id="counter">0</span></div></p>
+
+					<script>
+					        
+					        var initialCount = 0;
+					
+					   
+					        var counterElement = document.getElementById('counter');
+					
+					
+					        counterElement.textContent = initialCount;
+					
+					  
+					        function incrementCounter() {
+					            initialCount++;
+					            counterElement.textContent = initialCount;
+					        }
+					
+					 
+					        incrementCounter();
+					</script>
+
 				</div>
 				<footer>
 					<ul class="copyright">
