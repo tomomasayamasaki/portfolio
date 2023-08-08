@@ -275,14 +275,14 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function incrementCounter() {
+				    var meme = document.getElementById("counter").innerText
+				    meme += 1;
+				    document.getElementById("counter").innerText = meme;
+				}
+			</script>
 
 
 	</body>
-	<script>
-		function incrementCounter() {
-		    var meme = document.getElementById("counter")
-		    meme += 1;
-		    document.getElementById("counter").innerText = meme;
-		}
-	</script>
 </html>
