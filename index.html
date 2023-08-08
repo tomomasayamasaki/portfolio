@@ -13,7 +13,7 @@
 		            fetch('counter.txt')
 		                .then(response => response.text())
 		                .then(data => {
-		                    var count = parseInt(data) || 0; // データが無効な場合は0に設定
+		                    var count = parseInt(data) || 42; // データが無効な場合は0に設定
 		                    count += 1;
 		                    document.getElementById('counter').textContent = count;
 		                    
