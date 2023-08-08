@@ -30,8 +30,18 @@
 		  gtag('config', 'G-33XK7BECLX');
 		</script>
 
+
+		<script>
+		        var count = 0;
+		
+		        function incrementCounter() {
+		            count++;
+		            document.getElementById("counter").innerText = count;
+		        }
+		</script>
+
 	</head>
-	<body class="is-preload", onload="incrementVisitorCount()">
+	<body class="is-preload", onload="incrementCounter()">
 
 		<!-- Header -->
 			<section id="header">
@@ -252,25 +262,7 @@
 					<h1>Thank you for your visiting</h1>
 					<p><div class="bordered-text"><span id="counter">0</span></div></p>
 
-					<script>
-					        
-					        var initialCount = 0;
-					
-					   
-					        var counterElement = document.getElementById('counter');
-					
-					
-					        counterElement.textContent = initialCount;
-					
-					  
-					        function incrementCounter() {
-					            initialCount++;
-					            counterElement.textContent = initialCount;
-					        }
-					
-					 
-					        incrementCounter();
-					</script>
+
 
 				</div>
 				<footer>
