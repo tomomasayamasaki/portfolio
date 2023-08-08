@@ -272,21 +272,30 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 			        function incrementCounter() {
-			            // テキストファイルからカウンター値を読み込む
-			            fetch('counter.txt')
-			                .then(response => response.text())
-			                .then(data => {
-			                    var count = parseInt(data) || 0; // データが無効な場合は0に設定
-			                    count += 1;
-			                    document.getElementById('counter').textContent = count;
-			                    
-			                    // カウンター値をテキストファイルに保存
-			                    fetch('counter.txt', {
-			                        method: 'PUT', // ファイルの上書き
-			                        body: count.toString()
-			                    });
-			                });
-			        }
+				    fetch('counter.txt')
+				        .then(response => response.text())
+				        .then(data => {
+				            var count = parseInt(data) || 0;
+				            count++;
+				            document.getElementById('counter').textContent = count;
+				            
+				            fetch('counter.txt', {
+				                method: 'PUT',
+				                body: count.toString()
+				            });
+				        })
+				        .catch(error => {
+				            // ファイルが存在しない場合や読み取りエラーが発生した場合の処理
+				            var count = 1; // 初期値として1を設定
+				            document.getElementById('counter').textContent = count;
+				
+				            fetch('counter.txt', {
+				                method: 'PUT',
+				                body: count.toString()
+				            });
+				        });
+				}
+
 			</script>
 
 
