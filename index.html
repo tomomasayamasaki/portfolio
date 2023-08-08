@@ -7,25 +7,7 @@
 <html>
 	<head>
 		<title>Tomomasa Yamasaki Profile</title>
-		<script>
-		        function incrementCounter() {
-		            // テキストファイルからカウンター値を読み込む
-		            fetch('counter.txt')
-		                .then(response => response.text())
-		                .then(data => {
-		                    var count = parseInt(data) || 0; // データが無効な場合は0に設定
-		                    count += 1;
-				    alert(count)
-		                    document.getElementById('counter').textContent = count;
-		                    
-		                    // カウンター値をテキストファイルに保存
-		                    fetch('counter.txt', {
-		                        method: 'PUT', // ファイルの上書き
-		                        body: count.toString()
-		                    });
-		                });
-		        }
-		</script>
+		
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -269,7 +251,7 @@
 					</div>
 
 					<h1>Thank you for your visiting</h1>
-					<p><div class="bordered-text"><span id="counter">0</span></div></p>
+					
 
 
 
